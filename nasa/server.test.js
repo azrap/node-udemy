@@ -30,7 +30,6 @@ describe("GET requests -  /apod/:phoneNum ", () => {
 
   it("should give status 400 for bad", async () => {
     const phoneNum = "phone";
-
     res = await supertest(server).get(`/apod/${phoneNum}`);
     expect(res.statusCode).toEqual(400);
   });
